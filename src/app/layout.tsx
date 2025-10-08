@@ -27,10 +27,29 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen w-full bg-red-500`}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only fixed top-2 left-2 z-50
+                     rounded px-3 py-1 border bg-[--background] text-[--foreground]
+                     shadow focus:outline-none focus:ring-2 focus:ring-[--brand]"
+        >
+          Skip to content
+        </a>
+        <header className="p-8 bg-slate-700">
+          <div className="h-[100px] text-center">HEADER</div>
+        </header>
         <ToasterProvider />
-        {children}
+        <main
+          id="main-content"
+          className="w-full"
+        >
+          {children}
+        </main>
+        <footer className="h-[100px] p-8 bg-slate-700 text-center">
+          Footer
+        </footer>
       </body>
     </html>
   );

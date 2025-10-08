@@ -34,14 +34,19 @@ export const MagicLinkForm = () => {
         type="email"
         placeholder="Write your email here..."
         {...register("email")}
-        className="w-full border rounded p-2 bg-yellow-100"
+        className="w-full rounded-lg bg-white dark:bg-transparent
+           border border-[--color-border] px-3 py-2
+           placeholder:text-slate-400
+           focus:outline-none focus:ring-2 focus:ring-[--brand]"
         aria-invalid={!!errors.email}
       />
       {errors.email && <p className="text-red-500">{errors.email.message}</p>}
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full rounded bg-blue-200 text-white py-2 disabled:opacity-60"
+        className="w-full rounded-lg bg-[--brand] text-white py-2 px-4
+           hover:bg-[--brand-hover] disabled:opacity-60
+           focus-visible:outline-2 focus-visible:outline-[--brand]"
       >
         {isSubmitting ? "Sending" : "Send magic Link"}
       </button>
