@@ -8,7 +8,7 @@ export const useAuthActions = () => {
   const [sending, setSending] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
-  const signWithGoggle = useCallback(async () => {
+  const signInWithGoogle = useCallback(async () => {
     setError(null);
     await supabase.auth.signInWithOAuth({
       provider: "google",
@@ -16,24 +16,27 @@ export const useAuthActions = () => {
     });
   }, [supabase]);
 
-  const sendMagicLink = useCallback(async (email: string) => {
-    setError(null);
-    setSending(true);
-    try {
-      const { error } = await supabase.auth.signInWithOtp({
-        email,
-        options: { emailRedirectTo: `${location.origin}/auth/callback` },
-      });
-      if (error) throw error;
-      return true;
-    } catch(e:any{
-        setError(e?.message ?? "Login Failed")
+  const sendMagicLink = useCallback(
+    async (email: string) => {
+      setError(null);
+      setSending(true);
+      try {
+        const { error } = await supabase.auth.signInWithOtp({
+          email,
+          options: { emailRedirectTo: `${location.origin}/auth/callback` },
+        });
+        if (error) throw error;
+        return true;
+      } catch (e: unknown) {
+        const msg = e instanceof Error ? e.message : String(e);
+        setError(msg || "Login Failed");
         return false;
+      } finally {
+        setSending(false);
+      }
+    },
+    [supabase]
+  );
 
-    }finally{
-        setSending(false)
-    }
-  }, []);
-
-  return { sending, error, setError, signWithGoggle, sendMagicLink };
+  return { sending, error, setError, signInWithGoogle, sendMagicLink };
 };
