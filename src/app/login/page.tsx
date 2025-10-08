@@ -32,11 +32,11 @@ export default function LoginPage() {
     alert("Login link sended, check inbox and spam");
   }
   return (
-    <section className="max-w-sm mx-auto space-y-4">
+    <section className="grid place-items-center max-w-sm mx-auto space-y-4 bg-slate-500">
       <h2 className="text-xl font-semibold">Log In</h2>
       <button
         onClick={signWithGoogle}
-        className="w-full rounded bg-black text-white py-2"
+        className="w-full rounded  text-white py-2"
       >
         Continue with Google
       </button>
@@ -51,11 +51,11 @@ export default function LoginPage() {
             placeholder="Write your email here..."
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full border rounded p-2"
+            className="w-full border rounded p-2 bg-yellow-100"
           />
           <button
             disabled={sending}
-            className="w-full rounded bg-black text-white py-2 disabled:opacity-60"
+            className="w-full rounded bg-blue-200 text-white py-2 disabled:opacity-60"
           >
             {sending ? "Sending" : "Send magic Link"}
           </button>
