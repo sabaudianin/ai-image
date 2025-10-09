@@ -42,20 +42,6 @@ body {
   color: var(--foreground);
 }
 
-:where(a, button, input, textarea, select):focus-visible {
-  outline: 2px solid var(--brand);
-  outline-offset: 2px;
-}
-
-input[type="email"],
-input[type="text"],
-button,
-textarea,
-select {
-  border-radius: 0.5rem;
-  border: 1px solid var(--border);
-}
-
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

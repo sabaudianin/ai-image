@@ -20,6 +20,8 @@ export const useAuthActions = () => {
     async (email: string) => {
       setError(null);
       setSending(true);
+      console.count("sendMagicLink called");
+
       try {
         const { error } = await supabase.auth.signInWithOtp({
           email,

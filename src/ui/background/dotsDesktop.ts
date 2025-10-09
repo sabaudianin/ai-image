@@ -6,7 +6,7 @@ export const DOTS_DESKTOP: DotType[] = [
     top: "8%",
     left: "82%",
     dur: "65s",
-    delay: "-15s",
+    delay: "-5s",
     origin: "-10vw 18vh",
   },
   {
@@ -14,7 +14,7 @@ export const DOTS_DESKTOP: DotType[] = [
     top: "7%",
     left: "6%",
     dur: "180s",
-    delay: "-36s",
+    delay: "-6s",
     origin: "-9vw 12vh",
   },
   {
@@ -22,7 +22,7 @@ export const DOTS_DESKTOP: DotType[] = [
     top: "35%",
     left: "85%",
     dur: "120s",
-    delay: "-18s",
+    delay: "-8s",
     origin: "14vw -8vh",
   },
   {
@@ -30,7 +30,7 @@ export const DOTS_DESKTOP: DotType[] = [
     top: "15%",
     left: "70%",
     dur: "140s",
-    delay: "-22s",
+    delay: "-2s",
     origin: "-9vw 12vh",
   },
   {
@@ -38,7 +38,7 @@ export const DOTS_DESKTOP: DotType[] = [
     top: "52%",
     left: "10%",
     dur: "187s",
-    delay: "-6s",
+    delay: "-3s",
     origin: "-19vw 2vh",
   },
   {
@@ -46,7 +46,7 @@ export const DOTS_DESKTOP: DotType[] = [
     top: "58%",
     left: "50%",
     dur: "210s",
-    delay: "6s",
+    delay: "2s",
     origin: "12vw 18vh",
   },
   {
@@ -54,7 +54,7 @@ export const DOTS_DESKTOP: DotType[] = [
     top: "32%",
     left: "49%",
     dur: "170s",
-    delay: "-30s",
+    delay: "7s",
     origin: "-19vw 2vh",
   },
   {
@@ -70,7 +70,7 @@ export const DOTS_DESKTOP: DotType[] = [
     top: "68%",
     left: "35%",
     dur: "200s",
-    delay: "-48s",
+    delay: "11s",
     origin: "-12vw 22vh",
   },
 ];

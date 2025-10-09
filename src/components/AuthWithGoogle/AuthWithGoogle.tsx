@@ -7,8 +7,7 @@ export const AuthWithGoogle = () => {
     <div className="space-y-2">
       <button
         onClick={signInWithGoogle}
-        className="w-full rounded-lg  text-white py-2 px-4 hover:bg-[--brand-hover] disabled:opacity-60
-           focus-visible:outline-2 focus-visible:outline-[--brand]"
+        className="w-full lg:w-1/2 rounded-lg  text-white py-2 px-4 hover:bg-[--brand-hover] disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-[--brand] font-semibold bg-white/20 border  border-[var(--brand)]"
         aria-label="Continue with Google"
       >
         Continue with Google

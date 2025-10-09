@@ -44,7 +44,9 @@ export default function RootLayout({
         <Background />
         <div className="relative z-10 flex min-h-dvh flex-col">
           <header className="fixed inset-x-0 top-0 z-30 h-24 md:h-28 ">
-            <div className="p-8 text-center">HEADER</div>
+            <div className="p-8 text-center text-xl lg:text-4xl font-bold font-noto">
+              AI Image Generator
+            </div>
           </header>
           <ToasterProvider />
           <main
