@@ -1,0 +1,14 @@
+@theme {
+  --font-sans: var(--font-roboto), ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+
+  --font-alt: var(--font-noto), ui-sans-serif, system-ui, -apple-system,
+    Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}
+
+.font-roboto {
+  font-family: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
+}
+.font-noto {
+  font-family: var(--font-noto), ui-sans-serif, system-ui, sans-serif;
+}

@@ -4,7 +4,7 @@ import { AuthWithGoogle } from "@/components/AuthWithGoogle/AuthWithGoogle";
 
 export default function LoginPage() {
   return (
-    <section className="grid place-items-center mx-auto space-y-8 ">
+    <section className=" flex-1 grid place-items-center mx-auto space-y-8 w-full">
       <div className="text-center bg-white/10 p-8 rounded">
         <h2 className="text-xl font-semibold p-4">Log In</h2>
         <MagicLinkForm />
