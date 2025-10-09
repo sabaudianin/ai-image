@@ -1,0 +1,20 @@
+@keyframes move {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0, 0, 100px) rotate(360deg);
+  }
+}
+
+.animate-move {
+  animation-name: move;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .container-dot {
+    animation: none;
+  }
+}

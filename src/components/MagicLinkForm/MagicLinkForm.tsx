@@ -28,13 +28,13 @@ export const MagicLinkForm = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="space-y-2"
+      className="space-y-2 "
     >
       <input
         type="email"
         placeholder="Write your email here..."
         {...register("email")}
-        className="w-full rounded-lg bg-white dark:bg-transparent
+        className="w-full rounded-lg 
            border border-[--color-border] px-3 py-2
            placeholder:text-slate-400
            focus:outline-none focus:ring-2 focus:ring-[--brand]"
@@ -44,8 +44,7 @@ export const MagicLinkForm = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full rounded-lg bg-[--brand] text-white py-2 px-4
-           hover:bg-[--brand-hover] disabled:opacity-60
+        className="w-full rounded-lg bg-[--brand] text-white py-2 px-4 hover:bg-[--brand-hover] disabled:opacity-60
            focus-visible:outline-2 focus-visible:outline-[--brand]"
       >
         {isSubmitting ? "Sending" : "Send magic Link"}
