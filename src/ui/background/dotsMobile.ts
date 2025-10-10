@@ -3,8 +3,8 @@ import type { DotType } from "./types";
 export const DOTS_MOBILE: DotType[] = [
   {
     color: "var(--accent-alpha)",
-    top: "10%",
-    left: "70%",
+    top: "0%",
+    left: "50%",
     dur: "55s",
     delay: "-10s",
     origin: "-8vw 12vh",
@@ -12,7 +12,7 @@ export const DOTS_MOBILE: DotType[] = [
   {
     color: "var(--accent-bravo)",
     top: "38%",
-    left: "80%",
+    left: "50%",
     dur: "90s",
     delay: "-12s",
     origin: "10vw -6vh",
@@ -20,7 +20,7 @@ export const DOTS_MOBILE: DotType[] = [
   {
     color: "var(--accent-charlie)",
     top: "18%",
-    left: "20%",
+    left: "30%",
     dur: "110s",
     delay: "-18s",
     origin: "-7vw 10vh",
@@ -35,8 +35,8 @@ export const DOTS_MOBILE: DotType[] = [
   },
   {
     color: "var(--accent-echo)",
-    top: "55%",
-    left: "55%",
+    top: "80%",
+    left: "50%",
     dur: "140s",
     delay: "-20s",
     origin: "-14vw 6vh",

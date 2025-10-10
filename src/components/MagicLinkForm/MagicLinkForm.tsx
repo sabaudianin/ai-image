@@ -44,7 +44,7 @@ export const MagicLinkForm = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full lg:w-1/2 rounded-lg bg-[--brand] text-white py-2 px-4 bg-white/20 hover:bg-[--brand-hover] disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-[--brand] font-semibold border  border-[var(--brand)]"
+        className="w-full lg:w-1/4 rounded-lg bg-[--brand] text-white py-2 px-4 bg-white/20 hover:bg-[--brand-hover] disabled:opacity-60 focus-visible:outline-2 focus-visible:outline-[--brand] font-semibold border  border-[var(--brand)]"
       >
         {isSubmitting ? "Sending" : "Send Code"}
       </button>
