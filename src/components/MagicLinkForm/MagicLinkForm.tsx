@@ -34,8 +34,8 @@ export const MagicLinkForm = () => {
         type="email"
         placeholder="Write your email here..."
         {...register("email")}
-        className="w-full lg:w-1/2 rounded-lg 
-           border border-[--color-border] px-3 py-2
+        className="w-full lg:w-1/4 rounded-lg 
+           border border-[--color-border] p-4
            placeholder:text-slate-400
            focus:outline-none focus:ring-2 focus:ring-[--brand] text-center"
         aria-invalid={!!errors.email}

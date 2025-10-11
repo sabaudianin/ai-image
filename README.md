@@ -34,3 +34,21 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+Running Transformers directly in the browser caused several issues in Next.js — mainly due to RSC/SSR bundling conflicts and incorrect WASM paths.
+
+To solve this, I moved all model logic into a separate micro-frontend built with Vite, and embedded it inside the main Next.js + Supabase application using an iframe.
+
+Both apps communicate via a clearly defined postMessage contract, while all data storage and authentication stay safely on the Next.js side through Supabase with Row Level Security (RLS).
+
+This approach provides:
+
+Stable and secure architecture — the model runs in isolation, without exposing secrets.
+
+Fast load times — models and WASM files are cached by the browser’s Service Worker.
+
+Independent release cycle — the widget can be updated without redeploying the main app.
+
+Clean separation of concerns — ML logic is decoupled from the application logic.
+
+As a result, the app remains fast, maintainable, and production-ready, while showcasing a professional micro-frontend architecture that solves a real-world integration problem.
