@@ -1,5 +1,6 @@
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
+import ImageGenerator from "../../components/ImageGenerator/ImageGenerator";
 
 export default async function AppPage() {
   const supabase = await createClient();
@@ -11,10 +12,10 @@ export default async function AppPage() {
   if (!user) redirect("/login");
 
   return (
-    <section className="space-y-3">
+    <section className="flex-1 mx-auto space-y-8 w-full flex flex-col items-center p-2">
       <h2 className="text-xl font-semibold">Witaj , {user.email}</h2>
 
-      <p>Tu bedzie generator obrazów.</p>
+      <ImageGenerator />
     </section>
   );
 }

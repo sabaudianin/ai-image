@@ -23,7 +23,7 @@ export async function GET(req: NextRequest) {
     }
   );
 
-  // code jako STRING tymczasowy, jednorazowy kod autoryzacyjny,To nie jest token sesji, ani JWT zeby nie wrzucac w url http://localhost:3000/auth/callback?code=435ed8b9-36b2-428a-9ce3-36f3cd45b88a
+  // code jako POŚREDNIK tymczasowy, jednorazowy kod autoryzacyjny,To nie jest token sesji, ani JWT zeby nie wrzucac w url http://localhost:3000/auth/callback?code=435ed8b9-36b2-428a-9ce3-36f3cd45b88a
   const code = req.nextUrl.searchParams.get("code");
   if (!code) {
     // brak kodu wróc na main page
