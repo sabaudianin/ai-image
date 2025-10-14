@@ -6,8 +6,8 @@ import "./globals.css";
 import { ToasterProvider } from "@/components/ToasterProvider/ToasterProvider";
 
 export const metadata: Metadata = {
-  title: "Ai Images Generator",
-  description: "Generated Images from Description",
+  title: "Mini Frontend AI",
+  description: "Mini Fronted App with Gemini Ai",
 };
 
 const roboto = Roboto({
@@ -45,7 +45,7 @@ export default function RootLayout({
         <div className="relative z-10 flex min-h-dvh flex-col">
           <header className="fixed inset-x-0 top-0 z-30 h-24 md:h-28 ">
             <div className="p-8 text-center text-xl lg:text-4xl font-bold font-noto">
-              AI Image Generator
+              Mini Forntend App
             </div>
           </header>
           <ToasterProvider />
