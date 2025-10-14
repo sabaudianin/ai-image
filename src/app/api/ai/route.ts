@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { z } from "zod";
+import { unknown, z } from "zod";
 import { GoogleGenAI } from "@google/genai";
 
 const ai = new GoogleGenAI({});
@@ -25,5 +25,43 @@ function corsHeaders(origin: string | null) {
 export function OPTIONS(req: NextRequest) {
   const origin = req.headers.get("origin");
   const headers = corsHeaders(origin);
+  //zwracasz pusta odpowiedz i staus 204
   return new NextResponse(null, { status: 204, headers });
+}
+
+export async function POST(req: NextRequest) {
+  const origin = req.headers.get("origin");
+  const headers = corsHeaders(origin); //nagłowki dla wszystkich odp
+
+  try {
+    //tylko widget  wywoła API
+    if (WIDGET_ORIGIN && origin !== WIDGET_ORIGIN) {
+      // wbudowany NextResponse.json(),nie trzeba JSON.stringify
+      return NextResponse.json(
+        { error: "Origin not allowed" },
+        { status: 403, headers }
+      );
+    }
+    //body i walidacja
+    const body = await req.json().catch(() => null);
+    const parsed = requestSchema.safeParse(body);
+    if (!parsed.success) {
+      const msg = parsed.error.issues[0]?.message ?? "Invalid request body";
+      return NextResponse.json({ error: msg }, { status: 400, headers });
+    }
+    //wywołanie modelu
+    const response = await ai.models.generateContent({
+      model: MODEL_ID,
+      contents: [{ role: "user", parts: [{ text: parsed.data.prompt }] }],
+    });
+
+    const text = (response.text ?? "").trim();
+    //odpowiedz koncowa
+    return NextResponse.json({ text }, { status: 200, headers });
+  } catch (err: unknown) {
+    console.error("Gemini Api Error", err);
+    const message =
+      err instanceof Error ? err.message : "Internal server Error";
+    return NextResponse.json({ error: message }, { status: 500, headers });
+  }
 }
