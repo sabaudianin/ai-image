@@ -52,7 +52,7 @@ export default function RootLayout({
           </main>
           <footer className="p-4 text-center">
             Embeds an iframe from an external bundler (Vite). API requests are
-            sent to Next's api endpoint. Powered by Gemini.
+            sent to Next&#39;s api endpoint. Powered by Gemini.
           </footer>
         </div>
       </body>

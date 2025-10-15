@@ -2,7 +2,7 @@
 import { useAuthActions } from "@/hooks/useAuthActions/useAuthActions";
 
 export const AuthWithGoogle = () => {
-  const { error, signInWithGoogle } = useAuthActions();
+  const { signInWithGoogle } = useAuthActions();
   return (
     <div className="">
       <button

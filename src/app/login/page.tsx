@@ -8,8 +8,9 @@ export default function LoginPage() {
       <div className="flex flex-col gap-4 text-center bg-black/50 p-8 rounded-lg">
         <h2 className="text-2xl font-semibold p-4">To Start</h2>
         <p className="text-sm md:text-xl">
-          We'll send a one-time code to your email just to verify you are human.
-          We won't store your email for marketing without your consent.
+          We&#39;ll send a one-time code to your email just to verify you are
+          human. We won&#39;t store your email for marketing without your
+          consent.
         </p>
         <MagicLinkForm />
 

@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { unknown, z } from "zod";
+import { z } from "zod";
 import { GoogleGenAI } from "@google/genai";
 
 const ai = new GoogleGenAI({});
