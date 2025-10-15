@@ -4,7 +4,9 @@ import { GoogleGenAI } from "@google/genai";
 
 const ai = new GoogleGenAI({});
 const MODEL_ID = process.env.GEMINI_MODEL || "gemini-2.5-flash";
-const WIDGET_ORIGIN = process.env.WIDGET_ORIGIN;
+const WIDGET_ORIGIN = process.env.VERCEL_URL
+  ? `https://${process.env.VERCEL_URL}` //  produkcja,VERCEL_URL jest automatycznie dostarczany przez Vercel
+  : process.env.WIDGET_ORIGIN || "http://localhost:5173"; // Użyj lokalnego URL dla dev
 
 const requestSchema = z.object({
   prompt: z.string().min(3).max(200),
