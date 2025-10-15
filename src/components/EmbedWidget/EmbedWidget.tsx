@@ -1,11 +1,7 @@
 import React from "react";
 
 export const EmbedWidget = () => {
-  const hostUrl = process.env.VERCEL_URL || "micro-frontend-ai-neon.vercel.app";
-
-  // finalny URL do osadzenia w iframe.
-
-  const widgetUrl = `https://${hostUrl}`;
+  const widgetUrl = "https://micro-frontend-ai-neon.vercel.app";
 
   return (
     <section className="w-full min-h-screen">
