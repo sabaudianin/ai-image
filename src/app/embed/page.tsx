@@ -11,9 +11,13 @@ export default async function AppPage() {
 
   if (!user) redirect("/login");
 
+  const tempUser = user.email?.split("@")[0];
+
   return (
-    <section className="flex-1 mx-auto space-y-8 w-full flex flex-col items-center p-2">
-      <h2 className="text-xl font-semibold">Witaj , {user.email}</h2>
+    <section className="mx-auto space-y-8 w-full flex flex-col items-center justify-center p-2">
+      <h2 className="text-md lg:text-2xl font-semibold">
+        Hello , {tempUser} !
+      </h2>
       <EmbedWidget />
     </section>
   );

@@ -42,20 +42,18 @@ export default function RootLayout({
           Skip to content
         </a>
         <Background />
-        <div className="relative z-10 flex min-h-dvh flex-col">
-          <header className="fixed inset-x-0 top-0 z-30 h-24 md:h-28 ">
-            <div className="p-8 text-center text-xl lg:text-4xl font-bold font-noto">
-              Mini Forntend App
-            </div>
-          </header>
+        <div className="relative z-10 ">
           <ToasterProvider />
           <main
             id="main-content"
-            className="w-full flex-1 flex flex-col pt-24 md:pt-28"
+            className="w-full flex flex-col items-center mt-2"
           >
             {children}
           </main>
-          <footer className=" p-8 text-center">Footer</footer>
+          <footer className="p-4 text-center">
+            Embeds an iframe from an external bundler (Vite). API requests are
+            sent to Next's api endpoint. Powered by Gemini.
+          </footer>
         </div>
       </body>
     </html>
