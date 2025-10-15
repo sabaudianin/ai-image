@@ -2,7 +2,7 @@ import { NextResponse, NextRequest } from "next/server";
 import { createServerClient } from "@supabase/ssr";
 
 export async function GET(req: NextRequest) {
-  const res = NextResponse.redirect(new URL("/generate", req.url));
+  const res = NextResponse.redirect(new URL("/embed", req.url));
 
   const supabase = createServerClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL!,
