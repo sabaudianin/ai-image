@@ -1,12 +1,11 @@
 import React from "react";
 
 export const EmbedWidget = () => {
-  // jakby zmienne środowiskowe nie zostalywstrzykniete
-  const FALLBACK_URL = "https://micro-frontend-ai-neon.vercel.app";
+  const hostUrl = process.env.VERCEL_URL || "micro-frontend-ai-neon.vercel.app";
 
-  const widgetUrl = process.env.NEXT_PUBLIC_API_URL
-    ? `https://${process.env.NEXT_PUBLIC_API_URL}` // URL wstrzyknie Vercel
-    : FALLBACK_URL; // Ostateczny fallback do publicznego URL
+  // finalny URL do osadzenia w iframe.
+
+  const widgetUrl = `https://${hostUrl}`;
 
   return (
     <section className="w-full min-h-screen">
