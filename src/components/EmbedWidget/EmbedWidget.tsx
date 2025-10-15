@@ -1,7 +1,7 @@
 import React from "react";
 
 export const EmbedWidget = () => {
-  const widgetUrl = "https://micro-frontend-ai-neon.vercel.app";
+  const widgetUrl = "https://ai-widget.netlify.app";
 
   return (
     <section className="w-full min-h-screen">
