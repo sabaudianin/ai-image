@@ -9,7 +9,7 @@ export const EmbedWidget = () => {
     : "https://ai-widget.netlify.app";
 
   return (
-    <section className="w-full ">
+    <section className="w-full flex-1">
       <iframe
         src={widgetUrl}
         title="AI Widget"
