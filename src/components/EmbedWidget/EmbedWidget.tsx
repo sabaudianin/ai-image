@@ -9,11 +9,11 @@ export const EmbedWidget = () => {
     : "https://ai-widget.netlify.app";
 
   return (
-    <section className="w-full flex-1">
+    <section className="w-full flex-1 flex flex-col">
       <iframe
         src={widgetUrl}
         title="AI Widget"
-        className="w-full h-screen"
+        className="w-full flex-1 min-h-[400px] rounded-lg border-2 border-gray-700 shadow-xl"
         allow="clipboard-write"
       />
       <p className="mt-2 text-xs text-gray-500">
