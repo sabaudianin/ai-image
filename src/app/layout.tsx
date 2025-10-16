@@ -50,7 +50,7 @@ export default function RootLayout({
           >
             {children}
           </main>
-          <footer className="p-4 text-center sticky">
+          <footer className="p-4 text-center sticky lg:text-xl">
             Integrates a microfrontend built with Vite, embedded via iframe,
             while all API requests are handled through Next.js endpoints.
             Powered by Gemini AI.

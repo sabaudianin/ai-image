@@ -31,7 +31,7 @@ export const Background = () => {
         {DOTS_DESKTOP.map((dot, i) => (
           <span
             key={i}
-            className="animate-move absolute h-48 w-48 rounded-full bg-current opacity-90 [filter:blur(64px)] [will-change:transform,filter] [backface-visibility:hidden] after:content-[''] after:absolute after:-inset-8 after:[border-radius:inherit] after:bg-current after:opacity-50 after:[filter:blur(45px)] motion-reduce:animate-none"
+            className="animate-move absolute h-64 w-64 rounded-full bg-current opacity-90 [filter:blur(64px)] [will-change:transform,filter] [backface-visibility:hidden] after:content-[''] after:absolute after:-inset-8 after:[border-radius:inherit] after:bg-current after:opacity-50 after:[filter:blur(64px)] motion-reduce:animate-none"
             style={{
               color: dot.color,
               top: dot.top,
