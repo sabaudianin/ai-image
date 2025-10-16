@@ -11,7 +11,7 @@ export const Background = () => {
         {DOTS_MOBILE.map((dot, i) => (
           <span
             key={i}
-            className="animate-move absolute h-20 w-20 rounded-full bg-current opacity-90 [filter:blur(18px)] [will-change:transform,filter] [backface-visibility:hidden] after:content-[''] after:absolute after:-inset-6 after:[border-radius:inherit] after:bg-current after:opacity-50 after:[filter:blur(30px)] motion-reduce:animate-none"
+            className="animate-move absolute h-24 w-24 rounded-full bg-current opacity-90 [filter:blur(24px)] [will-change:transform,filter] [backface-visibility:hidden] after:content-[''] after:absolute after:-inset-6 after:[border-radius:inherit] after:bg-current after:opacity-50 after:[filter:blur(30px)] motion-reduce:animate-none"
             style={{
               color: dot.color,
               top: dot.top,
@@ -31,7 +31,7 @@ export const Background = () => {
         {DOTS_DESKTOP.map((dot, i) => (
           <span
             key={i}
-            className="animate-move absolute h-32 w-32 rounded-full bg-current opacity-90 [filter:blur(28px)] [will-change:transform,filter] [backface-visibility:hidden] after:content-[''] after:absolute after:-inset-8 after:[border-radius:inherit] after:bg-current after:opacity-50 after:[filter:blur(45px)] motion-reduce:animate-none"
+            className="animate-move absolute h-48 w-48 rounded-full bg-current opacity-90 [filter:blur(64px)] [will-change:transform,filter] [backface-visibility:hidden] after:content-[''] after:absolute after:-inset-8 after:[border-radius:inherit] after:bg-current after:opacity-50 after:[filter:blur(45px)] motion-reduce:animate-none"
             style={{
               color: dot.color,
               top: dot.top,

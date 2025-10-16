@@ -34,7 +34,7 @@ export default function RootLayout({
       lang="en"
       className={`${roboto.variable} ${notoSans.variable}`}
     >
-      <body className="antialiased min-h-dvh w-full bg-black font-roboto">
+      <body className="antialiased w-full bg-black font-roboto min-h-dvh flex flex-col">
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only fixed top-2 left-2 z-50 rounded px-3 py-1 border bg-[--background] text-[--foreground] shadow focus:outline-none focus:ring-2 focus:ring-[--brand]"
@@ -42,17 +42,18 @@ export default function RootLayout({
           Skip to content
         </a>
         <Background />
-        <div className="relative z-10 ">
+        <div className="relative z-10 flex flex-col flex-1">
           <ToasterProvider />
           <main
             id="main-content"
-            className="w-full flex flex-col items-center mt-2"
+            className="flex-1 w-full p-4 flex justify-center items-center"
           >
             {children}
           </main>
-          <footer className="p-4 text-center">
-            Embeds an iframe from an external bundler (Vite). API requests are
-            sent to Next&#39;s api endpoint. Powered by Gemini.
+          <footer className="p-4 text-center sticky">
+            Integrates a microfrontend built with Vite, embedded via iframe,
+            while all API requests are handled through Next.js endpoints.
+            Powered by Gemini AI.
           </footer>
         </div>
       </body>

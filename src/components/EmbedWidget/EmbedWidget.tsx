@@ -1,7 +1,12 @@
 import React from "react";
 
 export const EmbedWidget = () => {
-  const widgetUrl = "https://ai-widget.netlify.app";
+  //  Next domyslnie  ustawia NODE_ENV
+  const isDevelopment = process.env.NODE_ENV !== "production";
+
+  const widgetUrl = isDevelopment
+    ? "http://localhost:5173"
+    : "https://ai-widget.netlify.app";
 
   return (
     <section className="w-full min-h-screen">
