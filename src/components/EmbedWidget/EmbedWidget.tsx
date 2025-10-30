@@ -13,10 +13,10 @@ export const EmbedWidget = () => {
       <iframe
         src={widgetUrl}
         title="AI Widget"
-        className="w-full flex-1 min-h-[400px] rounded-lg border-2 border-gray-700 shadow-xl"
+        className="w-full flex-1 min-h-[600px] "
         allow="clipboard-write"
       />
-      <p className="mt-2 text-xs text-gray-500">
+      <p className="mt-2 text-xs text-white">
         Source: <code>{widgetUrl}</code>
       </p>
     </section>
